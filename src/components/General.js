@@ -1,5 +1,6 @@
 import React from 'react';
-import format from 'date-fns/format'
+import format from 'date-fns/format';
+import "../styles/general.css";
 
 class General extends React.Component {
     constructor(props) {
@@ -64,31 +65,31 @@ class General extends React.Component {
                         <h2>General information</h2>
                         <div>
                             <label htmlFor="firstName">First name: </label>
-                            <input type="text" id="firstName" name="firstName" value={firstName} onChange={this.handleInputChange} />
+                            <input type="text" id="firstName" name="firstName" value={firstName} onChange={this.handleInputChange} placeholder='John' required />
                         </div>
                         <div>
                             <label htmlFor="lastName">Last name: </label>
-                            <input type="text" id="lastName" name="lastName" value={lastName} onChange={this.handleInputChange} />
+                            <input type="text" id="lastName" name="lastName" value={lastName} onChange={this.handleInputChange} placeholder='Smith' required />
                         </div>
                         <div>
                             <label htmlFor="position">Desired position: </label>
-                            <input type="text" id="position" name="position" value={position} onChange={this.handleInputChange} />
+                            <input type="text" id="position" name="position" value={position} onChange={this.handleInputChange} placeholder='Assistant Editor' required />
                         </div>
                         <div>
                             <label htmlFor="birthDate">Date of birth: </label>
-                            <input type="date" id="birthDate" name="birthDate" value={birthDate} onChange={this.handleInputChange} />
+                            <input type="date" id="birthDate" name="birthDate" value={birthDate} onChange={this.handleInputChange} required />
                         </div>
                         <div>
                             <label htmlFor="address">Address: </label>
-                            <input type="text" id="address" name="address" value={address} onChange={this.handleInputChange} />
+                            <input type="text" id="address" name="address" value={address} onChange={this.handleInputChange} placeholder='City, Country' required />
                         </div>
                         <div>
                             <label htmlFor="email">Email address: </label>
-                            <input type="email" id="email" name="email" value={email} onChange={this.handleInputChange} />
+                            <input type="email" id="email" name="email" value={email} onChange={this.handleInputChange} placeholder='example@mail' required />
                         </div>
                         <div>
                             <label htmlFor="phone">Phone number: </label>
-                            <input type="tel" id="phone" name="phone" value={phone} onChange={this.handleInputChange} />
+                            <input type="tel" id="phone" name="phone" value={phone} onChange={this.handleInputChange} placeholder='123-45-67' pattern="\d{3}[-]\d{2}[-]\d{2}" required />
                         </div>
                         <button type="submit">Submit</button>
                     </form>
