@@ -1,7 +1,10 @@
+import General from "./General";
+
 function App() {
   return (
     <div className="App">
-      Hello world!
+      <h1>CV</h1>
+      <General />
     </div>
   );
 }
