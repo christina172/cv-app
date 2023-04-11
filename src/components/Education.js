@@ -25,7 +25,7 @@ class Education extends React.Component {
         this.setState({
             schools: this.state.schools.filter(item => item.id !== id)
         });
-    };
+    }
     render() {
         return (
             <div>

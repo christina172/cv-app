@@ -1,12 +1,13 @@
-import Education from "./Education";
 import General from "./General";
+import Education from "./Education";
+import Work from "./Work";
 
 function App() {
   return (
     <div className="App">
-      <h1>CV</h1>
       <General />
       <Education />
+      <Work />
     </div>
   );
 }
