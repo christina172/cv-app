@@ -48,7 +48,7 @@ class Education extends React.Component {
         return (
             <div className='component-container'>
                 <div className={`component-heading-add ${addClass}`}>
-                    <h2>Education and Traning</h2>
+                    <h2>Education and Training</h2>
                     <button onClick={this.addSchool}>Add</button>
                 </div>
                 <Schools schools={this.state.schools} delete={this.deleteSchool} addClass1={addClass1} class2={class2} />

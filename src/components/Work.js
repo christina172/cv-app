@@ -48,7 +48,7 @@ class Work extends React.Component {
         return (
             <div className='component-container'>
                 <div className={`component-heading-add ${addClass}`}>
-                    <h2>Work experience</h2>
+                    <h2>Work Experience</h2>
                     <button onClick={this.addJob}>Add</button>
                 </div>
                 <Jobs jobs={this.state.jobs} delete={this.deleteJob} addClass1={addClass1} class2={class2} />
