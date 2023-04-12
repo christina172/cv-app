@@ -1,6 +1,5 @@
 import React from 'react';
 import format from 'date-fns/format';
-import "../styles/general.css";
 
 class General extends React.Component {
     constructor(props) {
@@ -22,7 +21,6 @@ class General extends React.Component {
         this.setState({
             [name]: value
         });
-        console.log(name);
     }
     handleSubmit = event => {
         event.preventDefault();
@@ -42,8 +40,8 @@ class General extends React.Component {
             return (
                 <div className='general-info'>
                     <div className='name-and-position'>
-                        <h2>{firstName} {lastName}</h2>
-                        <h3>{position}</h3>
+                        <h1>{firstName} {lastName}</h1>
+                        <h2>{position}</h2>
                     </div>
                     <div className='date-and-contact'>
                         <div className="date-and-address">
@@ -60,39 +58,43 @@ class General extends React.Component {
             )
         } else {
             return (
-                <div className='form-container'>
-                    <form onSubmit={this.handleSubmit}>
+                <div className='component-container'>
+                    <div className="component-heading">
                         <h2>General information</h2>
-                        <div>
-                            <label htmlFor="firstName">First name: </label>
-                            <input type="text" id="firstName" name="firstName" value={firstName} onChange={this.handleInputChange} placeholder='John' required />
-                        </div>
-                        <div>
-                            <label htmlFor="lastName">Last name: </label>
-                            <input type="text" id="lastName" name="lastName" value={lastName} onChange={this.handleInputChange} placeholder='Smith' required />
-                        </div>
-                        <div>
-                            <label htmlFor="position">Desired position: </label>
-                            <input type="text" id="position" name="position" value={position} onChange={this.handleInputChange} placeholder='Assistant Editor' required />
-                        </div>
-                        <div>
-                            <label htmlFor="birthDate">Date of birth: </label>
-                            <input type="date" id="birthDate" name="birthDate" value={birthDate} onChange={this.handleInputChange} required />
-                        </div>
-                        <div>
-                            <label htmlFor="address">Address: </label>
-                            <input type="text" id="address" name="address" value={address} onChange={this.handleInputChange} placeholder='City, Country' required />
-                        </div>
-                        <div>
-                            <label htmlFor="email">Email address: </label>
-                            <input type="email" id="email" name="email" value={email} onChange={this.handleInputChange} placeholder='example@mail' required />
-                        </div>
-                        <div>
-                            <label htmlFor="phone">Phone number: </label>
-                            <input type="tel" id="phone" name="phone" value={phone} onChange={this.handleInputChange} placeholder='123-45-67' pattern="\d{3}[-]\d{2}[-]\d{2}" required />
-                        </div>
-                        <button type="submit">Submit</button>
-                    </form>
+                    </div>
+                    <div className='component-content'>
+                        <form onSubmit={this.handleSubmit}>
+                            <div>
+                                <label htmlFor="firstName">First name: </label>
+                                <input type="text" id="firstName" name="firstName" value={firstName} onChange={this.handleInputChange} placeholder='John' required />
+                            </div>
+                            <div>
+                                <label htmlFor="lastName">Last name: </label>
+                                <input type="text" id="lastName" name="lastName" value={lastName} onChange={this.handleInputChange} placeholder='Smith' required />
+                            </div>
+                            <div>
+                                <label htmlFor="position">Desired position: </label>
+                                <input type="text" id="position" name="position" value={position} onChange={this.handleInputChange} placeholder='Editor' required />
+                            </div>
+                            <div>
+                                <label htmlFor="birthDate">Date of birth: </label>
+                                <input type="date" id="birthDate" name="birthDate" value={birthDate} onChange={this.handleInputChange} required />
+                            </div>
+                            <div>
+                                <label htmlFor="address">Address: </label>
+                                <input type="text" id="address" name="address" value={address} onChange={this.handleInputChange} placeholder='City, Country' required />
+                            </div>
+                            <div>
+                                <label htmlFor="email">Email address: </label>
+                                <input type="email" id="email" name="email" value={email} onChange={this.handleInputChange} placeholder='example@mail' required />
+                            </div>
+                            <div>
+                                <label htmlFor="phone">Phone number: </label>
+                                <input type="tel" id="phone" name="phone" value={phone} onChange={this.handleInputChange} placeholder='123-45-67' pattern="\d{3}[-]\d{2}[-]\d{2}" required />
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
                 </div>
             )
         }

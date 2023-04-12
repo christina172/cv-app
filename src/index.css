@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+#root {
+    padding: 20px;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.component-heading,
+.component-content {
+    padding: 10px 30px;
+}
+
+.component-heading {
+    border-bottom: solid rgb(0, 119, 255) 2px;
+    background-color: rgb(196, 224, 255);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.component-heading-add {
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-between;
+    background-color: rgb(196, 224, 255);
+    border-radius: 20px;
+}
+
+.expanded {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: solid rgb(0, 119, 255) 2px;
+}
+
+.component-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.component-content-add {
+    padding: 10px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 20px;
+}
+
+.empty {
+    padding: 0;
+}
+
+.component-container {
+    border: solid rgb(0, 119, 255) 2px;
+    border-radius: 20px;
+}
+
+form,
+.general-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form {
+    /* width: fit-content; */
+    padding: 10px;
+    border: solid rgb(0, 119, 255) 2px;
+    background-color: rgb(196, 224, 255);
+    border-radius: 10px;
+}
+
+.edu-form,
+.job-form {
+    border: solid rgb(255, 145, 0) 2px;
+    background-color: rgb(255, 221, 176);
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+input,
+textarea {
+    padding: 0 2px;
+}
+
+form button {
+    align-self: center;
+}
+
+.general-info {
+    align-items: center;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.date-and-contact {
+    display: flex;
+    gap: 40px;
+}
+
+.date-and-contact div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+button {
+    padding: 1px 10px;
+}
+
+.edu-info,
+.job-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border: solid rgb(0, 119, 255) 2px;
+    background-color: rgb(196, 224, 255);
+    border-radius: 10px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

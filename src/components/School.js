@@ -19,7 +19,6 @@ class School extends React.Component {
         this.setState({
             [name]: value
         });
-        console.log(name);
     }
     handleSubmit = event => {
         event.preventDefault();
@@ -39,11 +38,11 @@ class School extends React.Component {
         if (submitted) {
             return (
                 <div className="edu-info">
-                    <div>Educational organization: {org}</div>
-                    <div>Qualification or degree: {degree}</div>
-                    <div>Field of study: {field}</div>
-                    <div>From: {format(new Date(from), "MMMM, YYY")}</div>
-                    <div>To: {format(new Date(to), "MMMM, YYY")}</div>
+                    <div><span>Educational organization:</span> {org}</div>
+                    <div><span>Qualification or degree:</span> {degree}</div>
+                    <div><span>Field of study:</span> {field}</div>
+                    <div><span>From:</span> {format(new Date(from), "MMMM, YYY")}</div>
+                    <div><span>To:</span> {format(new Date(to), "MMMM, YYY")}</div>
                     <div className='buttons'>
                         <button onClick={this.openEditMode}>Edit</button>
                         <button onClick={() => this.props.delete(this.props.school.id)}>Delete</button>
@@ -53,7 +52,7 @@ class School extends React.Component {
         } else {
             return (
                 <div className="form-container">
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit} className='edu-form'>
                         <div>
                             <label htmlFor="org">Educational organization: </label>
                             <input type="text" id="org" name="org" value={org} onChange={this.handleInputChange} placeholder='Trinity College' required />

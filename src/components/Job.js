@@ -19,7 +19,6 @@ class Job extends React.Component {
         this.setState({
             [name]: value
         });
-        console.log(name);
     }
     handleSubmit = event => {
         event.preventDefault();
@@ -39,11 +38,11 @@ class Job extends React.Component {
         if (submitted) {
             return (
                 <div className='job-info'>
-                    <div>Occupation or position held: {occupation}</div>
-                    <div>Employer: {employer}</div>
-                    <div>From: {format(new Date(from), "MMMM, YYY")}</div>
-                    <div>To: {format(new Date(to), "MMMM, YYY")}</div>
-                    <div>Tasks and responsibilities: {tasks}</div>
+                    <div><span>Occupation or position held:</span> {occupation}</div>
+                    <div><span>Employer:</span> {employer}</div>
+                    <div><span>From:</span> {format(new Date(from), "MMMM, YYY")}</div>
+                    <div><span>To:</span> {format(new Date(to), "MMMM, YYY")}</div>
+                    <div><span>Tasks and responsibilities:</span> {tasks}</div>
                     <div className='buttons'>
                         <button onClick={this.openEditMode}>Edit</button>
                         <button onClick={() => this.props.delete(this.props.job.id)}>Delete</button>
@@ -53,7 +52,7 @@ class Job extends React.Component {
         } else {
             return (
                 <div className='form-container'>
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.handleSubmit} className="job-form">
                         <div>
                             <label htmlFor="occupation">Occupation or position held: </label>
                             <input type="text" id="occupation" name="occupation" value={occupation} onChange={this.handleInputChange} placeholder='Assistant editor' required />

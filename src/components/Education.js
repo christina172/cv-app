@@ -27,13 +27,31 @@ class Education extends React.Component {
         });
     }
     render() {
+        let addClass;
+        if (this.state.schools.length > 0) {
+            addClass = "expanded";
+        } else {
+            addClass = "";
+        };
+        let addClass1;
+        if (this.state.schools.length === 0) {
+            addClass1 = "empty";
+        } else {
+            addClass1 = "";
+        };
+        let class2;
+        if (this.state.schools.length === 1 || this.state.schools.length === 2) {
+            class2 = "component-content";
+        } else {
+            class2 = "component-content-add";
+        };
         return (
-            <div>
-                <div className='header'>
+            <div className='component-container'>
+                <div className={`component-heading-add ${addClass}`}>
                     <h2>Education and Traning</h2>
                     <button onClick={this.addSchool}>Add</button>
                 </div>
-                <Schools schools={this.state.schools} delete={this.deleteSchool} />
+                <Schools schools={this.state.schools} delete={this.deleteSchool} addClass1={addClass1} class2={class2} />
             </div>
         )
     }

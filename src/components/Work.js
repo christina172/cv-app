@@ -27,13 +27,31 @@ class Work extends React.Component {
         });
     }
     render() {
+        let addClass;
+        if (this.state.jobs.length > 0) {
+            addClass = "expanded";
+        } else {
+            addClass = "";
+        };
+        let addClass1;
+        if (this.state.jobs.length === 0) {
+            addClass1 = "empty";
+        } else {
+            addClass1 = "";
+        };
+        let class2;
+        if (this.state.jobs.length === 1 || this.state.jobs.length === 2) {
+            class2 = "component-content";
+        } else {
+            class2 = "component-content-add";
+        }
         return (
-            <div>
-                <div className='header'>
+            <div className='component-container'>
+                <div className={`component-heading-add ${addClass}`}>
                     <h2>Work experience</h2>
                     <button onClick={this.addJob}>Add</button>
                 </div>
-                <Jobs jobs={this.state.jobs} delete={this.deleteJob} />
+                <Jobs jobs={this.state.jobs} delete={this.deleteJob} addClass1={addClass1} class2={class2} />
             </div>
         )
     }
