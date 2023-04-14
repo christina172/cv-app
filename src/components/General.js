@@ -90,7 +90,7 @@ class General extends React.Component {
                             </div>
                             <div>
                                 <label htmlFor="phone">Phone number: </label>
-                                <input type="tel" id="phone" name="phone" value={phone} onChange={this.handleInputChange} placeholder='123-45-67' pattern="\d{3}[-]\d{2}[-]\d{2}" required />
+                                <input type="text" id="phone" name="phone" value={phone} onChange={this.handleInputChange} placeholder='123-45-67' pattern="\d{3}[-]\d{2}[-]\d{2}" required />
                             </div>
                             <button type="submit">Submit</button>
                         </form>
